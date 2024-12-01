@@ -20,7 +20,7 @@ stack.pop()
 stack.pop()
 
 stack.pop()
-
+#Ensure len(stack) is greater than 0 be4 calling pop
 
 # stack.pop()
 print(stack)
