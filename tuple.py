@@ -105,3 +105,21 @@ print(f"\n stepDeletion={newnumb}")
 #Deleting a slice representing the entire list
 del newnumb[:]
 print(newnumb)
+
+#Passing Lists to Functions
+#What happens when a program passes a mutable list object to a function
+def modify_elements(items):
+    """multiplies all element values in items by 2"""
+    for i,_ in enumerate(items):
+        items[i]*=2
+        
+        
+
+numq=[10,3]
+modify_elements(numq)
+print(f'modifiedEle={numq}')
+
+#Passing a Tuple to a Function
+numk=(10,30)
+modify_elements(numk)
+print(f'modifiedEle={numk}')#This operation results in TypeError as Tuple is immutable
