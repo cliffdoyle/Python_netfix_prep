@@ -58,3 +58,46 @@ print(alphabet[13:])
 print(alphabet[::2])
 print(alphabet[::-1])
 print(alphabet[::-3])
+
+""" 
+6. 5.6 (Functions Returning Tuples) Define a function rotate that
+receives three arguments and returns a tuple in which the first argument
+is at index 1, the second argument is at index 2 and the third argument is
+at index 0. Define variables a, b and c containing 'Doug', 22 and
+1984. Then call the function three times. For each call, unpack its result
+into a, b and c, then display their values.
+"""
+def rotate(x,y,z):
+    return(z,x,y)
+
+a=['Doug',22,1984]
+b=['Doug',22,1984]
+c=['Doug',22,1984]
+a=rotate('viola','nadia','eunice')
+b=rotate('viola','nadia','eunice')
+c=rotate('viola','nadia','eunice')
+
+print(a)
+print(b)
+print(c)
+
+"""
+7. 5.7 (Duplicate Elimination) Create a function that receives a list and
+returns a (possibly shorter) list containing only the unique values in
+sorted order. Test your function with a list of numbers and a list of
+strings.
+    """
+def duplicate_elimination(seq):
+    res=[]
+    for v in seq:
+        
+        if v not in res:
+            res.append(v)
+            # print(res)
+    return sorted(res)
+
+lis1=[19343536720,883930209,100432,356422,6755843,846456,124806]
+lis2=['ker','hey','swee','hune']
+
+print(duplicate_elimination(lis1))
+print(duplicate_elimination(lis2))
