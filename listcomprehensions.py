@@ -99,3 +99,10 @@ print(combi)
 listcombi=[x**2 for x in numero if x % 2 !=0]
 print(listcombi)
 
+#Reduction :totaling the elements of a Sequence with sum
+#Reduction process a sequence's elements into a single value
+#Built in functions such as len,sum,min and max all do reduction
+
+numsum=sum(numero)
+print(numsum)
+
