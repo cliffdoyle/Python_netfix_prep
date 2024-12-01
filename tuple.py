@@ -110,16 +110,19 @@ print(newnumb)
 #What happens when a program passes a mutable list object to a function
 def modify_elements(items):
     """multiplies all element values in items by 2"""
-    for i,_ in enumerate(items):
+    for i,v in enumerate(items):
         items[i]*=2
+        # print(v)
+      
         
         
 
 numq=[10,3]
+numq.append(8)
 modify_elements(numq)
 print(f'modifiedEle={numq}')
 
 #Passing a Tuple to a Function
-numk=(10,30)
-modify_elements(numk)
-print(f'modifiedEle={numk}')#This operation results in TypeError as Tuple is immutable
+# numk=(10,30)
+# modify_elements(numk)
+# print(f'modifiedEle={numk}')#This operation results in TypeError as Tuple is immutable
