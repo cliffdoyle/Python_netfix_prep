@@ -28,5 +28,7 @@ print(letters)
 #tuple
 colors=('red','orange','yellow','green','blue')
 asce_color=sorted(colors)
+desc_color=sorted(colors,reverse=True,)
+print(desc_color)
 print(asce_color)
 print(colors)
