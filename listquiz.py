@@ -101,3 +101,4 @@ lis2=['ker','hey','swee','hune']
 
 print(duplicate_elimination(lis1))
 print(duplicate_elimination(lis2))
+
