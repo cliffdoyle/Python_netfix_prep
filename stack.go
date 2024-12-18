@@ -207,13 +207,23 @@ func checker(a Stack, instructions []string) string {
 }
 
 func main() {
-	s := &Stack{}
-	s.push(56)
+	// s := &Stack{}
+	// s.push(56)
+	// // fmt.Println(s)
+	// s.push(87)
+	// s.push(78)
+	// // s.Swap()
+	// // s.Rotate()
 	// fmt.Println(s)
-	s.push(87)
-	s.push(78)
-	// s.Swap()
-	// s.Rotate()
-	fmt.Println(s)
+	a:=Stack{2,1,3,6,5,8}
+
+	//Run push-swap
+	fmt.Println("Initial stack a:",a)
+	instructions:=PushSwap(a)
+	fmt.Println("Instructions:", instructions)
+
+	// Verify with checker
+	result := checker(a, instructions)
+	fmt.Println("Checker result:", result)
 
 }
