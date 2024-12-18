@@ -157,7 +157,55 @@ func PushSwap(a Stack)[]string{
 		pa(&a,&b)
 		instructions = append(instructions, "pa")
 	}
+	return instructions
 }
+// executeInstruction executes a single instruction on the stacks
+func executeInstruction(instruction string, a, b *Stack) error {
+	switch instruction {
+	case "sa":
+		sa(a)
+	case "sb":
+		sb(b)
+	case "ss":
+		ss(a, b)
+	case "pa":
+		pa(a, b)
+	case "pb":
+		pb(a, b)
+	case "ra":
+		ra(a)
+	case "rb":
+		rb(b)
+	case "rr":
+		rr(a, b)
+	case "rra":
+		rra(a)
+	case "rrb":
+		rrb(b)
+	case "rrr":
+		rrr(a, b)
+	default:
+		return errors.New("invalid instruction")
+	}
+	return nil
+}
+
+// checker verifies if the stack is sorted after executing instructions
+func checker(a Stack, instructions []string) string {
+	var b Stack
+	for _, instruction := range instructions {
+		err := executeInstruction(instruction, &a, &b)
+		if err != nil {
+			return "Error"
+		}
+	}
+
+	if isSorted(a) && len(b) == 0 {
+		return "OK"
+	}
+	return "KO"
+}
+
 func main() {
 	s := &Stack{}
 	s.push(56)
